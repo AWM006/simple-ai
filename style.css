@@ -1,0 +1,116 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* The Main Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh; /* Dynamic Viewport Height: shrinks when keyboard opens */
+  width: 100%;
+}
+
+/* Static Header */
+.app-header {
+  padding: 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Scrollable Middle Area */
+.chat-history {
+  flex-grow: 1; /* Takes up all remaining middle space and set the input field in bottom by dafault */
+  overflow-y: auto; /* when .chat-history area filled with element then autommatically scrool opens*/
+  padding: 16px;
+  background: #ffffff;
+}
+
+
+.input-container {
+  padding: 16px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-container input {
+  width: 85%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  font-size: 16px; 
+}
+
+
+.response{
+    width: fit-content; /* increase width by text size and increase highest 90% of parent size*/
+    max-width: 90%;
+    background-color: gray;
+    color: white;
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.message{
+    width: fit-content; 
+    max-width: 90%;
+    justify-self: right;
+    background-color:darkslategray;
+    color: white;
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.send{
+    border-radius: 20%;
+}
+
+
+
+
+
+
+
+
+
+/* Container specifically for the dots */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Space between the dots */
+    height: 24px; /* Keeps the bubble from collapsing */
+}
+
+/* Style the individual dots */
+.typing-indicator span {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    
+    /* Apply the animation */
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+/* Stagger the animations so they don't jump at the same time */
+.typing-indicator span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+/* The actual bouncing movement */
+@keyframes bounce {
+    0%, 80%, 100% { 
+        transform: translateY(0); /* Resting position */
+    }
+    40% { 
+        transform: translateY(-6px); /* Jump up */
+    }
+}

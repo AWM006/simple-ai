@@ -2,36 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI COPY</title>
-    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 interactive-widget=resizes-content">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
 <body>
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-10 textbox">
-    
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row justify-content-center inputFields">
-            <div class="col-10">
-                <div class="row justify-content-between mt-auto">
-                    <div class="col-9">
-                        <input type="text" id="textData" class="w-100">
-                    </div>
-                    <div class="col-3">
-                        <button class="w-100 sbutton" onclick="send()">submit</button>
-                    </div>                    
-                </div>
-            </div>
-        </div>
+
+
+    <div class="app-container">
+        <header class="app-header">Simple AI</header>
+  
+        <main class="chat-history">
+           
+            <div class="response"> hello its a simple ai</div>
+
+        </main>
+
+        <footer class="input-container">
+            <input type="text" class="myMessage" placeholder="Type a message..." />
+            <button class="send">SEND</button>
+        </footer>
     </div>
 
-    <script src="./script/script.js"></script>
-    <script src="./bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+
+
 </body>
 </html>
